@@ -1,0 +1,13 @@
+:root {
+  --primary-color-1: rgba(94, 231, 185, 1);
+  --primary-color-2: rgba(169, 250, 136, 1);
+  --light-blue-text: rgba(216, 229, 255, 1);
+
+  --dark-blue-background-body-card: rgba(33, 40, 54, 1);
+  --very-dark-blue-background-section: rgba(26, 32, 44, 1);
+
+  --dark-shadow: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+
+  --linear-gradient-primary: linear-gradient(90deg, var(--primary-color-1) 16.17%, var(--primary-color-2) 84.51%);
+  --linear-gradient-hero: linear-gradient(360deg, #212836 0%, rgba(33, 40, 54, 0) 100%);
+}

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-SemiBold.ttf') format('ttf');
+  font-weight: semibold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Gibson';
+}
