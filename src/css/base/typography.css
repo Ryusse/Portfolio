@@ -23,3 +23,22 @@ body {
   font-size: 18px;
   font-family: 'Gibson';
 }
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  background: var(--linear-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+h2 {
+}
+
+p {
+  font-size: var(--font-size-text);
+  color: var(--light-blue);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}

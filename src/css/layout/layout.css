@@ -1,0 +1,7 @@
+.layout {
+  background-color: var(--dark-blue-background-body-card);
+}
+
+.layout.overflow-hidden {
+  overflow: hidden;
+}
