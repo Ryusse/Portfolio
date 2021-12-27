@@ -1,17 +1,45 @@
 .button {
   cursor: pointer;
-  /* background: linear-gradient(var(--dark-blue-background-body-card), var(--dark-blue-background-body-card)) padding-box, var(--linear-gradient-primary) border-box;
   padding: 1rem;
-  border: 2px solid transparent; */
-  background: linear-gradient(var(--myColor1), var(--myColor2));
-  transition: --myColor1 3s, --myColor2 3s;
-  border-radius: 0.625rem;
+  border: 3px solid transparent;
+  border-radius: var(--border-radius);
   color: var(--white);
-  font-weight: var(--font-weight-semibold);
-  backdrop-filter: blur(0.5rem);
 }
 
-.button:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) padding-box, var(--linear-gradient-primary) border-box;
+.button--primary {
+  background-color: transparent;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  background: linear-gradient(var(--dark-blue-background-body-card), var(--dark-blue-background-body-card)) padding-box,
+    var(--linear-gradient-primary) border-box;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  transform: translateY(-3px);
+  background: padding-box, var(--linear-gradient-primary) border-box;
   color: var(--dark-blue-background-body-card);
+}
+
+.button--primary:active {
+  transform: translateY(10px);
+}
+
+.button--primary::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.625rem;
+  transition: all 0.4s;
+  background: var(--linear-gradient-primary);
+  opacity: 0.15;
+}
+
+.button--primary:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }

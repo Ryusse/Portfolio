@@ -5,6 +5,7 @@
   --white: rgb(255, 255, 255);
 
   --dark-blue-background-body-card: rgb(33, 40, 54);
+  --dark-blue-background-opacity: rgba(33, 40, 54, 0.55);
   --very-dark-blue-background-section: rgb(26, 32, 44);
 
   --dark-shadow: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
@@ -13,10 +14,18 @@
   --linear-gradient-hero: linear-gradient(360deg, #212836 0%, rgba(33, 40, 54, 0) 100%);
 
   --font-size-h1: clamp(2.813rem, 5vw + 1rem, 5rem);
+  --font-size-h2: clamp(2.188rem, 5vw + 1rem, 3.125rem);
+  --font-size-h3: clamp(1.5rem, 5vw + 1rem, 1.875rem);
+  --font-size-h4: clamp(1.125rem, 1.5vw + 1rem, 1.4rem);
 
-  --font-size-text: clamp(1.125rem, 0.5vw + 1rem, 2rem);
+  --font-size-text: clamp(1.125rem, 0.4vw + 1rem, 2rem);
 
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
+  --tab-padding: 0.5rem;
+  --max-width-desktop: 1400px;
+  --padding-mobile: 5vw;
+  --border-radius: 0.625rem;
 }

@@ -1,0 +1,15 @@
+.h2-style {
+  position: relative;
+  margin: 8.313rem 0 6.563rem 0;
+}
+
+.h2-style::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translate(-50%, 0);
+  width: 20%;
+  height: 5px;
+  background: var(--linear-gradient-primary);
+}

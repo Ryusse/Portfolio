@@ -5,3 +5,9 @@
 .layout.overflow-hidden {
   overflow: hidden;
 }
+
+.about__content {
+  max-width: var(--max-width-desktop);
+  margin: auto;
+  padding: 5rem var(--padding-mobile);
+}
