@@ -1,6 +1,9 @@
 .hero {
   position: relative;
   min-height: 100vh;
+
+  display: grid;
+  place-content: center;
 }
 
 .hero::before {
@@ -9,25 +12,36 @@
   position: absolute;
   z-index: -1;
   opacity: 0.2;
-  background: var(--linear-gradient-hero), url(../assets/background/hero-background-mobile.svg) no-repeat center;
+  background: var(--linear-gradient-hero), url(../../assets/background/hero-background-mobile.svg) no-repeat center;
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 
 .header {
-  max-width: var(--max-width-desktop);
-  padding: 3.125rem var(--padding-mobile);
-  margin: auto;
+  z-index: 1;
   position: sticky;
   top: 0;
+  padding: 1.5rem var(--padding-mobile);
+  transition: all 0.3s ease-in-out;
+}
+
+.header.scroll-active {
+  background-color: var(--very-dark-blue-background-opacity);
+}
+
+.navbar-principal {
+  margin: auto;
+
+  max-width: var(--max-width-desktop);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  z-index: 3;
+  grid-area: logo;
+  z-index: 4;
   display: grid;
   place-content: center;
   padding: var(--tab-padding);
@@ -35,26 +49,16 @@
   border-radius: 0.5rem;
 }
 
-.logo:focus {
-  outline: 2px solid var(--primary-color-1);
-}
-
-.navbar {
-  display: none;
-}
-
 .toggle {
+  grid-area: navbar;
   padding: var(--tab-padding);
   cursor: pointer;
-  z-index: 3;
+  z-index: 4;
   position: relative;
   width: 3rem;
   height: 2.8rem;
   border-radius: 50%;
-}
-
-.toggle:focus {
-  outline: 2px solid var(--primary-color-1);
+  background-color: var(--very-dark-blue-background-section);
 }
 
 .toggle__line {
@@ -97,7 +101,7 @@
 
 .menu {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   left: 0;
@@ -108,55 +112,119 @@
   transition: all 0.4s ease-in-out;
 
   display: grid;
-  place-content: center start;
+  place-content: center;
 }
 
 .menu.open {
-  display: block;
   clip-path: circle(141.2% at 100% 0);
   transition: all 0.4s ease-in-out;
   width: 100vw;
   height: 100vh;
 
   display: grid;
-  place-content: center start;
+  place-content: center;
 }
 
 .menu__list {
-  background-color: red;
-  padding: 0 5vw;
-  width: 100%;
-}
-
-.menu__item {
-  display: flex;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
 }
 
 .menu__link {
-  color: white;
-  font-weight: semibold;
-  padding: 1rem;
+  color: var(--white);
+  padding: 1rem 2.063rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -2.188rem;
+  width: 15.8rem;
+  height: 1.5px;
+  background-color: #3b4a64;
+  border-radius: var(--border-radius);
+}
+
+.menu__link:nth-last-child(1)::after {
+  display: none;
+}
+
+.navbar {
+  display: none;
+  position: relative;
+  border-radius: 8px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__link {
+  position: relative;
+  color: var(--white);
+  padding: 1rem 2.063rem;
+  border: 3.5px solid transparent;
+  border-radius: var(--border-radius);
+  z-index: 1;
+}
+
+.marker {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 3.5px;
+  left: 0;
+  bottom: 0;
+  background: var(--primary-color-1);
+  border-radius: var(--border-radius);
+  transition: all 0.35s ease;
+}
+
+.marker.using-mouse {
+  display: block;
 }
 
 .welcome {
+  margin: auto;
+  max-width: 35.563rem;
   display: grid;
-  place-content: center;
-  height: calc(100vh - 131px);
-}
-
-.welcome__container {
-  display: flex;
-  flex-direction: column;
   gap: 1.188rem;
+  margin: auto;
+  padding: 8.75rem var(--padding-mobile);
+  max-width: var(--max-width-desktop);
 }
 
 .welcome__title {
   background: var(--linear-gradient-primary) repeat 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rainbow-text-simple-animation-rev 5s ease infinite;
 }
 
 .welcome__text {
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .hero::before {
+    background: var(--linear-gradient-hero), url(../../assets/background/hero-background-desktop.svg) no-repeat center;
+    background-size: cover;
+  }
+
+  .welcome__button {
+    justify-self: center;
+  }
+
+  .menu,
+  .toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+  }
 }

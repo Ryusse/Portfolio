@@ -3,6 +3,18 @@
   outline: none;
 }
 
+:focus {
+  outline: 2.5px solid var(--primary-color-1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.using-mouse :focus {
+  outline: none;
+}
+
 img {
   width: 100%;
   height: auto;

@@ -1,15 +1,28 @@
 .h2-style {
-  position: relative;
-  margin: 8.313rem 0 6.563rem 0;
+  display: grid;
+  place-content: center;
+  margin-bottom: 8.313rem;
 }
 
-.h2-style::before {
+.h2-style::after {
+  z-index: -1;
   content: "";
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
-  bottom: -5px;
   transform: translate(-50%, 0);
-  width: 20%;
+  max-width: 62px;
   height: 5px;
   background: var(--linear-gradient-primary);
+}
+
+@media (min-width: 900px) {
+  .h2-style {
+    place-content: start;
+  }
+
+  .h2-style::after {
+    left: 0;
+    transform: translate(0, 0);
+  }
 }

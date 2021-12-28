@@ -1,6 +1,9 @@
 .button {
+  display: block;
+  /* position: relative; */
   cursor: pointer;
-  padding: 1rem;
+
+  padding: 1rem 3rem;
   border: 3px solid transparent;
   border-radius: var(--border-radius);
   color: var(--white);
@@ -8,7 +11,7 @@
 
 .button--primary {
   background-color: transparent;
-  position: relative;
+
   transition: all 0.25s ease-in-out;
   background: linear-gradient(var(--dark-blue-background-body-card), var(--dark-blue-background-body-card)) padding-box,
     var(--linear-gradient-primary) border-box;
@@ -25,7 +28,7 @@
   transform: translateY(10px);
 }
 
-.button--primary::after {
+/* .button--primary::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -39,7 +42,14 @@
   opacity: 0.15;
 }
 
-.button--primary:hover::after {
+.button--primary:hover::after,
+.button--primary:focus::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+} */
+
+@media (min-width: 1000px) {
+  .button {
+    max-width: 13rem;
+  }
 }

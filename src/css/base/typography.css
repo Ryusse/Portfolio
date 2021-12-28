@@ -66,3 +66,12 @@ p {
 .button {
   font-weight: var(--font-weight-semibold);
 }
+
+@media (min-width: 900px) {
+  h2,
+  h3,
+  h4,
+  p {
+    text-align: start;
+  }
+}
