@@ -1,0 +1,29 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.subtitle-style {
+  display: grid;
+  place-content: center;
+  margin-bottom: 8.313rem;
+
+  @include query(lg) {
+    place-content: start;
+  }
+
+  &::after {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 62px;
+    height: 5px;
+    background: $linear-gradient-primary;
+
+    @include query(lg) {
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+}

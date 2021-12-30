@@ -1,0 +1,72 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-SemiBold.ttf') format('ttf');
+  font-weight: semibold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('../assets/Font/Gibson/Gibson-Bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Gibson';
+}
+
+h1 {
+  text-align: center;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  color: $white;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  color: $white;
+  font-weight: $font-weight-semibold;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  color: $white;
+  font-weight: $font-weight-semibold;
+}
+
+p {
+  font-size: $font-size-text;
+  color: $light-blue;
+  font-weight: $font-weight-regular;
+  line-height: 1.7;
+}
+
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+  @include query(lg) {
+    text-align: start;
+  }
+}
+
+.button {
+  font-weight: $font-weight-semibold;
+}

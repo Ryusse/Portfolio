@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.welcome {
+  margin: auto;
+  max-width: 35.563rem;
+  display: grid;
+  gap: 1.188rem;
+  margin: auto;
+  padding: 8.75rem $padding-mobile;
+  max-width: $max-width-desktop;
+
+  &__title {
+    background: $linear-gradient-primary repeat 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    margin-bottom: 2.5rem;
+  }
+
+  &__button {
+    @include query(lg) {
+      justify-self: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use '../utils/mixins' as *;
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.563rem;
+
+  @include query(lg) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

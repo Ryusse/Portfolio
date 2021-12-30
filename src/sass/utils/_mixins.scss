@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+@mixin query($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin flexbox($dir: null, $jc: null, $ai: null, $gap: null) {
+  display: flex;
+
+  @if $dir == col {
+    flex-direction: column;
+  } @else if $dir == column {
+    flex-direction: column;
+  } @else if $dir == row {
+    flex-direction: row;
+  } @else if $dir {
+    flex-direction: $dir;
+  }
+
+  @if $ai {
+    align-items: $ai;
+  }
+  @if $jc {
+    justify-content: $jc;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+}

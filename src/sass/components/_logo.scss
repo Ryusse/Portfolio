@@ -1,0 +1,10 @@
+@use '../utils/variables' as *;
+
+.logo {
+  z-index: 4;
+  display: grid;
+  place-content: center;
+  padding: $tab-padding;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+}

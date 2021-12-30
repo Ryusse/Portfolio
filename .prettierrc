@@ -14,7 +14,7 @@
     {
         "files": ["**/*.css", "**/*.scss", "**/*.html"],
         "options": {
-            "singleQuote": false
+            "singleQuote": true
         }
     }
     ]

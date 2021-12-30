@@ -1,3 +1,5 @@
+import '../sass/main.scss'
+
 const body = document.body,
   header = document.querySelector('.header'),
   toggle = document.querySelector('.toggle'),
@@ -78,3 +80,39 @@ const indicator = (e) => {
   marker.style.left = e.offsetLeft + 'px'
   marker.style.width = e.offsetWidth + 'px'
 }
+
+//Swiper
+
+var swiper = new Swiper('.mySwiper', {
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: true,
+  },
+})
+
+const swiper = document.querySelector('.swiper').swiper
+
+// Now you can use all slider methods like
+swiper.slideNext()
+
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// })

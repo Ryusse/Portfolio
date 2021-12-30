@@ -1,0 +1,56 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.toggle {
+  grid-area: navbar;
+  padding: $tab-padding;
+  cursor: pointer;
+  z-index: 4;
+  position: relative;
+  width: 3rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: $very-dark-blue-background-section;
+
+  @include query(lg) {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    background-color: $white;
+    height: 2px;
+    left: 0.9rem;
+    right: 0.9rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__line:nth-child(1) {
+    top: 0.9rem;
+  }
+
+  &__line:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &__line:nth-child(3) {
+    bottom: 0.9rem;
+  }
+
+  &.open .toggle__line:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: $primary-color-1;
+  }
+
+  &.open .toggle__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open .toggle__line:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+    background-color: $primary-color-1;
+  }
+}

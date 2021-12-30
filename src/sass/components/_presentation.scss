@@ -1,0 +1,19 @@
+@use '../utils/mixins' as *;
+
+.presentation {
+  max-width: 36.25rem;
+  margin-top: 2.563rem;
+
+  display: grid;
+  gap: 1.5rem;
+
+  &__text {
+    margin: 1.313rem 0 3.75rem 0;
+  }
+
+  &__button {
+    @include query(lg) {
+      justify-self: start;
+    }
+  }
+}

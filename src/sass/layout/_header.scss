@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  padding: 1.2rem $padding-mobile;
+  transition: all 0.3s ease-in-out;
+}
+
+.header.scroll-active {
+  background-color: $very-dark-blue-background-opacity;
+}

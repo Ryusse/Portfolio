@@ -1,0 +1,53 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: 3px solid transparent;
+  border-radius: $border-radius;
+  color: $white;
+
+  @include query(lg) {
+    max-width: 13rem;
+  }
+}
+
+.button--primary {
+  transition: all 0.25s ease-in-out;
+  background: linear-gradient($dark-blue-background-body-card, $dark-blue-background-body-card) padding-box,
+    $linear-gradient-primary border-box;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    background: padding-box, $linear-gradient-primary border-box;
+    color: $dark-blue-background-body-card;
+  }
+
+  &:active {
+    transform: translateY(10px);
+  }
+
+  &::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.625rem;
+    transition: all 0.4s;
+    background: $linear-gradient-primary;
+    opacity: 0.15;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+}
