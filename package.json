@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "sass": "^1.45.1",
-    "swiper": "^7.4.1",
     "vite": "^2.7.2"
   }
 }

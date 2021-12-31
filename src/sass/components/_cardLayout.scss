@@ -1,0 +1,14 @@
+@use '../utils/variables' as *;
+
+@use '../utils/mixins' as *;
+
+.card-layout {
+  display: none;
+
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+
+  @include query(lg) {
+    display: grid;
+  }
+}

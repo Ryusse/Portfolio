@@ -50,6 +50,13 @@ h4 {
   font-weight: $font-weight-semibold;
 }
 
+h5 {
+  font-size: $font-size-h5;
+  color: $white;
+  font-weight: $font-weight-regular;
+  text-align: center;
+}
+
 p {
   font-size: $font-size-text;
   color: $light-blue;
