@@ -9,6 +9,7 @@
   display: grid;
   gap: 2.375rem;
   place-content: center;
+  filter: $dark-shadow;
 
   &__icon-container {
     min-height: 4.875rem;
