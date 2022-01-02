@@ -1,8 +1,9 @@
 $primary-color-1: rgb(94, 231, 185);
 $primary-color-2: rgb(169, 250, 136);
-$light-blue: rgb(216, 229, 255);
+$light-blue: rgb(231, 239, 255);
 $white: rgb(255, 255, 255);
 
+$soft-blue: rgb(27, 64, 94);
 $dark-blue-background-body-card: rgb(33, 40, 54);
 $dark-blue-background-opacity: rgba(33, 40, 54, 0.8);
 $very-dark-blue-background-section: rgb(26, 32, 44);
@@ -18,10 +19,10 @@ $linear-gradient-hero: linear-gradient(360deg, #212836 0%, rgba(33, 40, 54, 0) 1
 $font-size-h1: clamp(2.813rem, 5vw + 1rem, 5rem);
 $font-size-h2: clamp(2.188rem, 5vw + 1rem, 3.125rem);
 $font-size-h3: clamp(1.5rem, 5vw + 1rem, 1.875rem);
-$font-size-h4: clamp(1.125rem, 1.5vw + 1rem, 1.4rem);
+$font-size-h4: clamp(1.125rem, 1.5vw + 1rem, 1.5rem);
 $font-size-h5: 1.5rem;
 
-$font-size-text: clamp(1.125rem, 0.4vw + 1rem, 1.5rem);
+$font-size-text: clamp(1rem, 0.3vw + 1rem, 1.5rem);
 
 $font-weight-regular: 400;
 $font-weight-semibold: 600;

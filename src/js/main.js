@@ -69,9 +69,12 @@ menu.addEventListener('keydown', (event) => {
   }
 })
 
-menuLink.addEventListener('click', () => {
-  toggle.classList.remove('open')
-  menu.classList.remove('open')
+Array.prototype.forEach.call(menuList.children, (link) => {
+  link.addEventListener('click', () => {
+    console.log('remove')
+    toggle.classList.remove('open')
+    menu.classList.remove('open')
+  })
 })
 
 const indicator = (e) => {

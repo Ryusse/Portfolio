@@ -1,6 +1,5 @@
-@use '../utils/variables' as *;
-
-@use '../utils/mixins' as *;
+@use '../../utils/variables' as *;
+@use '../../utils/mixins' as *;
 
 .card-layout {
   display: none;

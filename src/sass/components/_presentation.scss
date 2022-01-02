@@ -7,6 +7,17 @@
   display: grid;
   gap: 1.5rem;
 
+  &__title-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    @include query(lg) {
+      justify-content: start;
+    }
+  }
+
   &__text {
     margin: 1.313rem 0 3.75rem 0;
   }

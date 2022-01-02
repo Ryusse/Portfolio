@@ -1,5 +1,7 @@
-@use 'about';
-@use 'header';
-@use 'hero';
+@use 'grid/project-card-layout';
+@use 'grid/card-layout';
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/about';
+@use 'sections/skill';
 @use 'layout';
-@use 'skill';

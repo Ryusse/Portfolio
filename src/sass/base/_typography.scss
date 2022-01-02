@@ -23,7 +23,7 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Gibson';
 }
 
@@ -64,6 +64,26 @@ p {
   line-height: 1.7;
 }
 
+a {
+  text-align: center;
+}
+
+.menu__link,
+.navbar__link {
+  font-size: $font-size-text;
+}
+
+.button {
+  font-weight: $font-weight-semibold;
+}
+
+.mask__icons-name {
+  font-size: 1rem;
+  color: $light-blue;
+  font-weight: $font-weight-regular;
+  line-height: 1.7;
+}
+
 h2,
 h3,
 h4,
@@ -72,8 +92,4 @@ p {
   @include query(lg) {
     text-align: start;
   }
-}
-
-.button {
-  font-weight: $font-weight-semibold;
 }

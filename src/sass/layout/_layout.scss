@@ -30,7 +30,9 @@
 }
 
 .about__container,
-.skill__container {
+.skill__container,
+.projects__container,
+.contact__container {
   max-width: $max-width-desktop;
   margin: auto;
   padding: 8.75rem $padding-mobile;
