@@ -11,7 +11,7 @@
   background-color: $dark-blue-background-body-card;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
 
   &.overflow-hidden {
     overflow: hidden;
@@ -27,6 +27,11 @@
   grid-column: 1;
   grid-row: 1/3;
   scroll-snap-align: start;
+}
+
+.footer {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .about__container,

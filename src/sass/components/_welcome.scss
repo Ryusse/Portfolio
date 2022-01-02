@@ -10,12 +10,6 @@
   padding: 8.75rem $padding-mobile;
   max-width: $max-width-desktop;
 
-  &__title {
-    background: $linear-gradient-primary repeat 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   &__text {
     margin-bottom: 2.5rem;
   }

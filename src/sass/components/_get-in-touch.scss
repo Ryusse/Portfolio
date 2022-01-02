@@ -1,0 +1,10 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.get-in-touch {
+  &__gradient {
+    background: $linear-gradient-primary repeat 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,18 @@
+@use '../../utils/variables' as *;
+@use '../../utils/mixins' as *;
+
+.contact {
+  background-color: $very-dark-blue-background-section;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5.75rem;
+
+    @include query(lg) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+}
