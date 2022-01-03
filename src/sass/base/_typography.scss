@@ -68,9 +68,11 @@ a {
   text-align: center;
 }
 
-.menu__link,
-.navbar__link {
+.menu__link {
   font-size: $font-size-text;
+}
+.navbar__link {
+  font-size: $font-size-navbar;
 }
 
 .button {
