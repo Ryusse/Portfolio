@@ -3,13 +3,13 @@
 
 ## **Links**
 
-- Solution URL: [Demo](https://joel-portfolio-website.netlify.app/#about)
+- Preview: [Demo](https://joel-portfolio-website.netlify.app/#about)
 
 ## **Built with**
 
-- html
-- css (flexbox, grid)
-- javascript
+- Html
+- Scss (flexbox, grid)
+- Javascript
 - Mobile-first workflow
 
 ## **Design**
