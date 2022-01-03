@@ -15,11 +15,18 @@
   }
 
   &__icon-container {
+    position: relative;
+    cursor: pointer;
     background-color: $dark-blue-background-body-card;
     padding: 1.563rem;
     border-radius: 50%;
     display: grid;
     place-content: center;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+
+    &:hover .tooltip {
+      top: -70px;
+      opacity: 1;
+    }
   }
 }

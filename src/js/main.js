@@ -5,9 +5,7 @@ const body = document.body,
   toggle = document.querySelector('.toggle'),
   menu = document.querySelector('.menu'),
   menuList = document.querySelector('.menu__list'),
-  menuLink = document.querySelector('.menu__link'),
   navbar = document.querySelector('.navbar'),
-  navbarLink = document.querySelector('.navbar__link'),
   marker = document.querySelector('.marker')
 
 window.onscroll = () => {
@@ -22,8 +20,6 @@ toggle.addEventListener('click', () => {
   toggle.classList.toggle('open')
   menu.classList.toggle('open')
   menuList.classList.add('open')
-
-  // body.classList.toggle('overflow-hidden')
 })
 
 window.addEventListener('resize', function () {
@@ -41,7 +37,7 @@ Array.prototype.forEach.call(navbar.children, (link) => {
   })
 })
 
-// Let the document know when the mouse is being used
+// When the mouse is being used
 body.addEventListener('mousedown', () => {
   body.classList.add('using-mouse')
   marker.classList.add('using-mouse')
@@ -55,6 +51,7 @@ body.addEventListener('keydown', (event) => {
   }
 })
 
+//Close toggle when press escape
 toggle.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     toggle.classList.remove('open')
@@ -62,6 +59,7 @@ toggle.addEventListener('keydown', (event) => {
   }
 })
 
+//Close menu when press escape
 menu.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     toggle.classList.remove('open')

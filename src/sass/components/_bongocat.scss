@@ -1,0 +1,67 @@
+//Hi! i'm joel, this code is not mine 😜, you can see the original here: https://codepen.io/carolineartz/pen/qBOEzQa?editors=0010
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.bongocat {
+  width: 80vw;
+
+  @include query(lg) {
+    width: 30rem;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+#bongo-cat {
+  fill: $very-dark-blue-background-section;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+
+  .laptop-cover,
+  .headphone .band {
+    fill: none;
+  }
+
+  .paw,
+  .head {
+    stroke: $orange;
+  }
+
+  .laptop-keyboard {
+    stroke-width: 2;
+  }
+
+  .terminal-code {
+    stroke-width: 5;
+  }
+
+  .music .note,
+  .laptop-base,
+  .laptop-cover,
+  .paw .pads {
+    stroke: $pink;
+  }
+
+  .table line,
+  .headphone .band,
+  .headphone .speaker path:nth-child(3) {
+    stroke: $green;
+  }
+
+  .terminal-frame,
+  .laptop-keyboard,
+  .headphone .speaker path:nth-child(2) {
+    stroke: $blue;
+  }
+
+  .terminal-code,
+  .headphone .speaker path:first-child {
+    stroke: $cyan;
+  }
+}
