@@ -3,7 +3,7 @@
 
 ## **Links**
 
-- Preview: [Demo](https://joel-portfolio-website.netlify.app/#about)
+- Preview: [Demo](https://joel-portfolio-website.netlify.app/)
 
 ## **Built with**
 
