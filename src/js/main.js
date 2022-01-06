@@ -8,25 +8,57 @@ const body = document.body,
   navbar = document.querySelector('.navbar'),
   marker = document.querySelector('.marker')
 
+const classController = (method, tag, className) => {
+  if (method === 'add') {
+    return tag.classList.add(`${className}`)
+  }
+  if (method === 'remove') {
+    return tag.classList.remove(`${className}`)
+  }
+  if (method === 'toggle') {
+    return tag.classList.toggle(`${className}`)
+  }
+  return console.log('error on the method')
+}
+
+const indicator = (e) => {
+  marker.style.left = e.offsetLeft + 'px'
+  marker.style.width = e.offsetWidth + 'px'
+}
+
+// When the mouse is being used
+body.addEventListener('mousedown', () => {
+  classController('add', body, 'using-mouse')
+  classController('add', marker, 'using-mouse')
+})
+
+// Re-enable focus styling when Tab is pressed
+body.addEventListener('keydown', (event) => {
+  if (event.key === 'Tab') {
+    classController('remove', body, 'using-mouse')
+    classController('add', marker, 'using-mouse')
+  }
+})
+
 window.onscroll = () => {
   if (window.scrollY > 100) {
-    header.classList.add('scroll-active')
+    classController('add', header, 'scroll-active')
   } else {
-    header.classList.remove('scroll-active')
+    classController('remove', header, 'scroll-active')
   }
 }
 
 toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open')
-  menu.classList.toggle('open')
-  menuList.classList.add('open')
+  classController('toggle', toggle, 'open')
+  classController('toggle', menu, 'open')
+  classController('add', menuList, 'open')
 })
 
 window.addEventListener('resize', function () {
   if (innerWidth > 900) {
-    toggle.classList.remove('open')
-    menu.classList.remove('open')
-    menuList.classList.remove('open')
+    classController('remove', toggle, 'open')
+    classController('remove', menu, 'open')
+    classController('remove', menuList, 'open')
   }
 })
 
@@ -37,45 +69,25 @@ Array.prototype.forEach.call(navbar.children, (link) => {
   })
 })
 
-// When the mouse is being used
-body.addEventListener('mousedown', () => {
-  body.classList.add('using-mouse')
-  marker.classList.add('using-mouse')
-})
-
-// Re-enable focus styling when Tab is pressed
-body.addEventListener('keydown', (event) => {
-  if (event.key === 'Tab') {
-    body.classList.remove('using-mouse')
-    marker.classList.remove('using-mouse')
-  }
-})
-
 //Close toggle when press escape
 toggle.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    toggle.classList.remove('open')
-    menu.classList.remove('open')
+    classController('remove', toggle, 'open')
+    classController('remove', menu, 'open')
   }
 })
 
 //Close menu when press escape
 menu.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    toggle.classList.remove('open')
-    menu.classList.remove('open')
+    classController('remove', toggle, 'open')
+    classController('remove', menu, 'open')
   }
 })
 
 Array.prototype.forEach.call(menuList.children, (link) => {
   link.addEventListener('click', () => {
-    console.log('remove')
-    toggle.classList.remove('open')
-    menu.classList.remove('open')
+    classController('remove', toggle, 'open')
+    classController('remove', menu, 'open')
   })
 })
-
-const indicator = (e) => {
-  marker.style.left = e.offsetLeft + 'px'
-  marker.style.width = e.offsetWidth + 'px'
-}
