@@ -1,0 +1,23 @@
+@use '../utils/variables' as *;
+
+.loader-container {
+  background-color: $dark-blue-background-body-card;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+
+  &__loader {
+    width: 5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    path {
+      fill: $primary-color-1;
+    }
+  }
+}
