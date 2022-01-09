@@ -8,57 +8,51 @@ const body = document.body,
   navbar = document.querySelector('.navbar'),
   marker = document.querySelector('.marker')
 
-const classController = (method, tag, className) => {
-  if (method === 'add') {
-    return tag.classList.add(`${className}`)
-  }
-  if (method === 'remove') {
-    return tag.classList.remove(`${className}`)
-  }
-  if (method === 'toggle') {
-    return tag.classList.toggle(`${className}`)
-  }
-  return console.log('error on the method')
-}
-
 const indicator = (e) => {
   marker.style.left = e.offsetLeft + 'px'
   marker.style.width = e.offsetWidth + 'px'
 }
 
+// window.addEventListener('load', function () {
+//   document.querySelector('.preloader').classList.add('opacity-0')
+//   setTimeout(function () {
+//     document.querySelector('.preloader').style.display = 'none'
+//   }, 1000)
+// })
+
 // When the mouse is being used
 body.addEventListener('mousedown', () => {
-  classController('add', body, 'using-mouse')
-  classController('add', marker, 'using-mouse')
+  body.classList.add('using-mouse')
+  marker.classList.add('using-mouse')
 })
 
 // Re-enable focus styling when Tab is pressed
 body.addEventListener('keydown', (event) => {
   if (event.key === 'Tab') {
-    classController('remove', body, 'using-mouse')
-    classController('add', marker, 'using-mouse')
+    body.classList.remove('using-mouse')
+    marker.classList.add('using-mouse')
   }
 })
 
 window.onscroll = () => {
   if (window.scrollY > 100) {
-    classController('add', header, 'scroll-active')
+    header.classList.add('scroll-active')
   } else {
-    classController('remove', header, 'scroll-active')
+    header.classList.remove('scroll-active')
   }
 }
 
 toggle.addEventListener('click', () => {
-  classController('toggle', toggle, 'open')
-  classController('toggle', menu, 'open')
-  classController('add', menuList, 'open')
+  toggle.classList.toggle('open')
+  menu.classList.toggle('open')
+  menuList.classList.add('open')
 })
 
 window.addEventListener('resize', function () {
   if (innerWidth > 900) {
-    classController('remove', toggle, 'open')
-    classController('remove', menu, 'open')
-    classController('remove', menuList, 'open')
+    toggle.classList.remove('open')
+    menu.classList.remove('open')
+    menuList.classList.remove('open')
   }
 })
 
@@ -69,25 +63,23 @@ Array.prototype.forEach.call(navbar.children, (link) => {
   })
 })
 
-//Close toggle when press escape
 toggle.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    classController('remove', toggle, 'open')
-    classController('remove', menu, 'open')
+    toggle.classList.remove('open')
+    menu.classList.remove('open')
   }
 })
 
-//Close menu when press escape
 menu.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    classController('remove', toggle, 'open')
-    classController('remove', menu, 'open')
+    toggle.classList.remove('open')
+    menu.classList.remove('open')
   }
 })
 
 Array.prototype.forEach.call(menuList.children, (link) => {
   link.addEventListener('click', () => {
-    classController('remove', toggle, 'open')
-    classController('remove', menu, 'open')
+    toggle.classList.remove('open')
+    menu.classList.remove('open')
   })
 })
