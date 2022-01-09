@@ -1,8 +1,7 @@
 @use '../utils/variables' as *;
-@use '../utils/mixins' as *;
 
 .loader-container {
-  background-color: $dark-blue-background-body-card;
+  background-color: $very-dark-blue-background-section;
   position: fixed;
   top: 0;
   left: 0;
