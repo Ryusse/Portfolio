@@ -5,23 +5,25 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
-  background: $primary-color-1;
-  color: $white;
+  z-index: 200;
+  background: $linear-gradient-primary;
+  color: $dark-blue-background-body-card;
   padding: 0.625rem 1.125rem;
   border-radius: 1.563rem;
   opacity: 0;
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  &::before {
+  &::after {
     position: absolute;
     content: '';
+    z-index: -1;
     height: 0.95rem;
     width: 0.95rem;
-    background: $primary-color-1;
+    background: $linear-gradient-primary;
+    clip-path: polygon(50% 53%, 0 0, 100% 0);
     left: 50%;
-    bottom: -0.375rem;
-    transform: translateX(-50%) rotate(45deg);
+    bottom: -0.9rem;
+    transform: translateX(-50%);
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
