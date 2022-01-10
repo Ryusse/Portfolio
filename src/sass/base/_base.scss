@@ -11,9 +11,11 @@
 
 html {
   scroll-behavior: smooth;
+  transition: opacity 0.3s ease-in-out;
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 

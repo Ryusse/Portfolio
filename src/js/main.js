@@ -1,6 +1,7 @@
 import '../sass/main.scss'
 
 const body = document.body,
+  loaderContainer = document.querySelector('.loader-container'),
   header = document.querySelector('.header'),
   toggle = document.querySelector('.toggle'),
   menu = document.querySelector('.menu'),
@@ -13,12 +14,17 @@ const indicator = (e) => {
   marker.style.width = e.offsetWidth + 'px'
 }
 
-// window.addEventListener('load', function () {
-//   document.querySelector('.preloader').classList.add('opacity-0')
-//   setTimeout(function () {
-//     document.querySelector('.preloader').style.display = 'none'
-//   }, 1000)
-// })
+const initLoader = () => {
+  loaderContainer.style.opacity = 1
+  setTimeout(function () {
+    loaderContainer.style.opacity = 0
+    loaderContainer.style.display = 'none'
+  }, 1000)
+}
+
+window.addEventListener('load', () => {
+  initLoader()
+})
 
 // When the mouse is being used
 body.addEventListener('mousedown', () => {
