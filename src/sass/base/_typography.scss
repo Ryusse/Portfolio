@@ -1,41 +1,52 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
-@font-face {
-  font-family: 'Gibson';
-  src: url('../assets/Font/Gibson/Gibson-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Gibson';
+//   src: url('../../assets/Font/Gibson/Gibson.eot');
+//   src: local('Gibson'), url('../../assets/Font/Gibson/Gibson.eot?#iefix') format('embedded-opentype'),
+//     url('../../assets/Font/Gibson/Gibson.woff2') format('woff2'),
+//     url('../../assets/Font/Gibson/Gibson.woff') format('woff'),
+//     url('../../assets/Font/Gibson/Gibson.ttf') format('truetype');
 
-@font-face {
-  font-family: 'Gibson';
-  src: url('../assets/Font/Gibson/Gibson-SemiBold.ttf') format('ttf');
-  font-weight: semibold;
-  font-style: normal;
-}
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'Gibson';
-  src: url('../assets/Font/Gibson/Gibson-Bold.ttf') format('ttf');
-  font-weight: bold;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Gibson';
+//   src: url('../../assets/Font/Gibson/Gibson-SemiBold.eot');
+//   src: local('Gibson SemiBold'), local('Gibson-SemiBold'),
+//     url('../../assets/Font/Gibson/Gibson-SemiBold.eot?#iefix') format('embedded-opentype'),
+//     url('../../assets/Font/Gibson/Gibson-SemiBold.woff2') format('woff2'),
+//     url('../../assets/Font/Gibson/Gibson-SemiBold.woff') format('woff'),
+//     url('../../assets/Font/Gibson/Gibson-SemiBold.ttf') format('truetype');
+//   font-weight: semibold;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Gibson';
+//   src: url('../assets/Font/Gibson/Gibson-Bold.ttf') format('ttf');
+//   font-weight: bold;
+//   font-style: normal;
+// }
 
 body {
   font-size: 16px;
-  font-family: 'Gibson';
+  font-family: 'Encode Sans', sans-serif;
 }
 
 h1 {
   text-align: center;
   font-size: $font-size-h1;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-black;
 }
 
 h2 {
   font-size: $font-size-h2;
   color: $white;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
