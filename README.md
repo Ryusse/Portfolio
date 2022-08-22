@@ -11,6 +11,7 @@
 - Scss (flexbox, grid)
 - Javascript
 - Mobile-first workflow
+- Vitejs
 
 ## **Design**
 
@@ -18,3 +19,7 @@
 <div  align="center" >
   <img align="right"  style="widht: 5rem;" src="src/assets/design/desktop-design.jpg" />
 </div>
+
+## **Run**
+
+- npm run dev
